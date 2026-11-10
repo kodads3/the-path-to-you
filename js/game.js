@@ -26,6 +26,10 @@ let gameCompleted = false;
 
 const protagonistSprite = new Image();
 protagonistSprite.src = "assets/characters/protagonista.PNG";
+// Redibujar el juego cuando cargue el sprite
+protagonistSprite.onload = () => {
+    drawGame();
+};
 
 // Skin de Desconocido
 const desconocidoSkin = new Image();
