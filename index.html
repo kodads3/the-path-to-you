@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THE PATH TO YOU</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <header class="header">
+        <span>THE PATH TO YOU</span>
+        <span class="subtitle">A romantic pixel adventure</span>
+    </header>
+
+    <main class="game-container">
+
+        <div class="game-topbar">
+            <span>CHAPTER I — THE BEGINNING</span>
+            <button id="saveButton">Guardar partida</button>
+        </div>
+
+        <div class="mission-panel">
+            <span>OBJETIVO ACTUAL</span>
+            <p id="missionText">Habla con el Viajero</p>
+        </div>
+
+        <div class="inventory-panel">
+            <span>OBJETOS ENCONTRADOS</span>
+            <p id="inventoryText">0 objetos</p>
+        </div>
+
+        <div class="game-frame">
+
+            <!-- PORTADA PRINCIPAL -->
+            <section class="cover-screen" id="coverScreen">
+
+            <img
+            src="assets/images/portada.png"
+            alt="The Path To You"
+            class="cover-image"
+        >
+
+        <div class="cover-content">
+            <h1>THE PATH TO YOU</h1>
+
+            <button id="playButton">
+                ♥ JUGAR ♥
+            </button>
+        </div>
+
+    </section>
+
+    <canvas id="game" width="960" height="640"></canvas>
+
+            <div id="coordinates" class="coordinates">
+                X: 4 | Y: 10
+            </div>
+
+            <div id="statusMessage" class="status-message">
+                <strong id="dialogueName"></strong>
+                <p id="dialogueText"></p>
+                <span class="dialogue-arrow">▼</span>
+            </div>
+
+            <section class="start-screen" id="startScreen">
+
+                <p class="eyebrow">A STORY ABOUT DISTANCE</p>
+
+                <h1>THE PATH TO YOU</h1>
+
+                <p>Every journey begins somewhere...</p>
+
+                <button id="newGameButton">
+                    NUEVA PARTIDA
+                </button>
+
+                <button id="continueButton">
+                    CONTINUAR
+                </button>
+
+            </section>
+
+            <!-- PANTALLA FINAL -->
+
+            <section class="ending-screen" id="endingScreen">
+
+                <p class="eyebrow">THE END OF THE JOURNEY</p>
+
+                <h1>THE PATH TO YOU</h1>
+
+                <p class="ending-message">
+                    Every path, every memory, every step...
+                    led to you.
+                </p>
+
+                <p class="ending-subtitle">
+                    And this is only the beginning of our story.
+                </p>
+
+                <span class="ending-heart">♥</span>
+
+            </section>
+
+        </div>
+
+        <div class="mobile-controls">
+
+            <div class="direction-pad">
+
+                <button data-move="up">▲</button>
+
+                <div class="middle-buttons">
+                    <button data-move="left">◀</button>
+                    <button data-move="down">▼</button>
+                    <button data-move="right">▶</button>
+                </div>
+
+            </div>
+
+            <button id="interactButton" class="interact-button">
+                HABLAR
+            </button>
+
+        </div>
+
+        <p class="instructions">
+            WASD / FLECHAS: MOVERSE
+            <span>·</span>
+            E: INTERACTUAR
+        </p>
+
+    </main>
+
+    <!-- Música de fondo del juego -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="assets/music/musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/game.js"></script>
+
+</body>
+</html>
