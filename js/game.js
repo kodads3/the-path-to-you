@@ -25,7 +25,7 @@ let gameCompleted = false;
 // IMAGEN DE LA PROTAGONISTA
 
 const protagonistSprite = new Image();
-protagonistSprite.src = "assets/characters/protagonista.png";
+protagonistSprite.src = "assets/characters/protagonista.PNG";
 
 // Skin de Desconocido
 const desconocidoSkin = new Image();
